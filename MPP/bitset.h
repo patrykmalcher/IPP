@@ -16,7 +16,7 @@ uint8_t *bitsetIni(size_t size);
 // Zmienia i-ty bit w bitsecie.
 void changeIthBit(uint8_t **bitset, size_t i);
 
-// zwraca i-ty bit w bitsecie.
+// Zwraca i-ty bit w bitsecie.
 bool getIthBit(uint8_t **bitset, size_t i);
 
 #endif
