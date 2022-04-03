@@ -8,7 +8,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-// Inicjalizuje bitseta. zwraca wskaźnik
+// Inicjalizuje bitseta. Zwraca wskaźnik
 // do nowo przydzielonej pamięci lub NULL
 // w przypadku błędu alokacji.
 uint8_t *bitsetIni(size_t size);
