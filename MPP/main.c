@@ -31,7 +31,7 @@ int main() {
   if (check == 1) {
     free(productsOfDimensions);
     printError(1);
-    return 0;
+    return 1;
   }
 
   size_t startPoint = 0, endPoint = 0;
@@ -41,7 +41,7 @@ int main() {
   if (check == 1) {
     free(productsOfDimensions);
     printError(2);
-    return 0;
+    return 1;
   }
 
   check = scanPoint(&endPoint, dimension, &productsOfDimensions);
@@ -49,7 +49,7 @@ int main() {
   if (check == 1) {
     free(productsOfDimensions);
     printError(3);
-    return 0;
+    return 1;
   }
 
   uint8_t *vis = bitsetIni(productsOfDimensions[dimension]);
@@ -67,21 +67,21 @@ int main() {
     free(productsOfDimensions);
     free(vis);
     printError(2);
-    return 0;
+    return 1;
   }
 
   if (getIthBit(&vis, endPoint)) {
     free(productsOfDimensions);
     free(vis);
     printError(3);
-    return 0;
+    return 1;
   }
 
   if (check == 1) {
     free(productsOfDimensions);
     free(vis);
     printError(4);
-    return 0;
+    return 1;
   }
 
   int c = getchar();
@@ -90,7 +90,7 @@ int main() {
     free(productsOfDimensions);
     free(vis);
     printError(5);
-    return 0;
+    return 1;
   }
 
   check = bfs(startPoint, endPoint, &productsOfDimensions, &vis, dimension);
